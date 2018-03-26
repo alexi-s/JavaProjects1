@@ -208,34 +208,71 @@ public class Main {
 //            System.out.println("arr[" + i + "] = " + arr[i]);
 //        }
 
-        Random rand = new Random();
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Введите длину массива: ");
-        int arrLength = scan.nextInt();
-        int arr[] = new int[arrLength];
-        int sum = 0;
-        int mult = 1;
+//        Random rand = new Random();
+//        Scanner scan = new Scanner(System.in);
+//        System.out.print("Введите длину массива: ");
+//        int arrLength = scan.nextInt();
+//        int arr[] = new int[arrLength];
+//        int sum = 0;
+//        int mult = 1;
+//
+//        for (int i = 0; i < arr.length; i++){
+//            arr[i] = rand.nextInt(10) - 5;
+//        }
+//
+//        System.out.print("Массив: ");
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//        System.out.println();
+//
+//        for (int i : arr) {
+//            if(i >= 0){
+//                sum += i;
+//            } else {
+//                mult *= i;
+//            }
+//        }
+//
+//        System.out.println("Сумма положительых элементов массива: " + sum);
+//        System.out.println("Произведение отрицательных элементов массива: " + mult);
 
-        for (int i = 0; i < arr.length; i++){
-            arr[i] = rand.nextInt(10) - 5;
+//--------------------------------------------------------------------------------------------------
+
+        Random rand = new Random();
+
+        int[] arr = new int[10];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rand.nextInt(50);
         }
 
-        System.out.print("Массив: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int i : arr) {
+            System.out.print(i + " ");
         }
         System.out.println();
 
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr.length - 1; j++) {
+//                if (arr[j] < arr[j + 1]) {
+//                    int temp = arr[j];
+//                    arr[j] = arr[j + 1];
+//                    arr[j + 1] = temp;
+//                }
+//            }
+//        }
+
+        int min = arr[0], max = arr[0];
         for (int i : arr) {
-            if(i >= 0){
-                sum += i;
-            } else {
-                mult *= i;
+            if (i < min){
+                min = i;
+            }
+            if (i > max){
+                max = i;
             }
         }
-
-        System.out.println("Сумма положительых элементов массива: " + sum);
-        System.out.println("Произведение отрицательных элементов массива: " + mult);
+        System.out.println("Minimum: " + min);
+        System.out.println("Maximum: " + max);
     }
 }
 
