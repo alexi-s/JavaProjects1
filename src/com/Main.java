@@ -251,41 +251,28 @@ public class Main {
 //            }
 //        }
 
-
         Random rand = new Random();
+        final int SIZE = 10;
 
-        final int SIZE = 5;
-        int matrix[][] = new int[SIZE][SIZE];
+        int arr[] = new int[SIZE];
+        int arr2[] = new int[SIZE];
+
+        arr[0] = 1;
+        arr2[0] = 99;
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr2));
+
+        System.arraycopy(arr, 0, arr2, 0, arr.length);
+        System.out.println(Arrays.toString(arr2));
 
 
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = rand.nextInt(10);
-            }
-        }
-
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + "\t");
-            }
-            System.out.println();
-        }
-
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = matrix.length - i; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + " ");
-            }
-            System.out.println();
-        }
-
-        System.out.println();
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                if(j < matrix.length - i - 1){
-                    System.out.print(matrix[i][j] + " ");
-                }
-            }
-            System.out.println();
-        }
+//        for (int i = 0; i < matrix.length; i++) {
+//            for (int j = 0; j < matrix[i].length; j++) {
+//                if((j > matrix.length - i - 1) && (j > i)){
+//                    System.out.print(matrix[i][j] + " ");
+//                }
+//            }
+//            System.out.println();
+//        }
     }
 }
