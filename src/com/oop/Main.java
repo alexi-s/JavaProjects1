@@ -48,6 +48,8 @@ import java.util.Scanner;
         m.goAll(3,9,2,4,5);
         */
 
+// --------------------------------------------------------------------
+    /*
 public class Main {
 
     public static void main(String[] args) {
@@ -59,3 +61,6 @@ public class Main {
 
     }
 }
+*/
+
+
