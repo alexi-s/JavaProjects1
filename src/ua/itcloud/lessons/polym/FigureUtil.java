@@ -13,7 +13,7 @@ public class FigureUtil {
 
     public static FigureUtil getInstance(){
         if (instance == null) {
-            System.out.println("Create instance");
+//            System.out.println("Create instance");
             instance = new FigureUtil();
         }
         return instance;
