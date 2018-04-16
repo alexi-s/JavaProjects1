@@ -13,4 +13,5 @@ public class Cube extends Square {
     public double getArea() {
         return height * height * height;
     }
+
 }

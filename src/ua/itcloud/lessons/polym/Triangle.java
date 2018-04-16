@@ -17,4 +17,12 @@ public class Triangle extends Figure {
     public double getArea() {
         return (1.0/2) * width * height;
     }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "height=" + height +
+                ", width=" + width +
+                '}';
+    }
 }

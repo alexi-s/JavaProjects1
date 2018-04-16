@@ -16,4 +16,11 @@ public class Rectangle extends Square {
     public double getArea() {
         return width * height;
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle{height=" + super.height +
+                ", width=" + width +
+                '}';
+    }
 }

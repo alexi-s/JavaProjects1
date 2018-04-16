@@ -15,4 +15,11 @@ public class Square extends Figure {
     public double getArea() {
         return height * height;
     }
+
+    @Override
+    public String toString() {
+        return "Square{" +
+                "height=" + height +
+                '}';
+    }
 }
