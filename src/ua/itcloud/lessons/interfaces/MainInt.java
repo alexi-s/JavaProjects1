@@ -19,12 +19,24 @@ public class MainInt {
 //        People p = new People();
 //        p.move();
 
-       new Movable() {
+       Movable m = new Movable() {
             @Override
             public void move() {
-                System.out.println("Movable is moving");
+                System.out.println("Own is moving");
             }
-        }.move();
+        };
 
+        Car c = new Car();
+        SomeMoves.makeMove(c);
+        Human h = new Human();
+        SomeMoves.makeMove(h);
+        SomeMoves.makeMove(m);
+
+        SomeMoves.makeMove(new Movable() {
+            @Override
+            public void move() {
+                System.out.println("Anonimous is moving");
+            }
+        });
     }
 }
