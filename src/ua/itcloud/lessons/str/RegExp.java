@@ -12,5 +12,6 @@ public class RegExp {
         Matcher webMatcher = webPattern.matcher("hello https://google.com");
         boolean matchResult = webMatcher.matches();
         System.out.println(matchResult);
+        // boolean simple = Pattern.matches(".*(http|https)://.*");
     }
 }
